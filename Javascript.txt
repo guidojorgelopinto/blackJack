@@ -1,0 +1,379 @@
+JAVASCRIPT
+
+- JavaScript se ejecuta del lado del cliente.
+- Es sensible a mayúsculas y minúsculas (case-sensitive).
+
+Polyfill:
+Código que permite usar funcionalidades de ES6 en versiones viejas como ES5.
+
+Node.js:
+Permite ejecutar JavaScript en el servidor (similar a PHP o C++).
+
+
+====================
+CONSOLE
+====================
+
+console.log('Hola Mundo');
+
+console   -> es un objeto
+.log()    -> es un método (función dentro de un objeto)
+'Hola Mundo' -> argumento
+
+Otros métodos:
+console.warn()   -> muestra advertencias
+console.error()  -> muestra errores
+console.info()   -> muestra información
+console.table()  -> muestra datos en tabla
+console.time()   -> comienza a medir el tiempo (rendimiento)
+console.timeEnd() -> finaliza la medición de tiempo
+
+
+====================
+DOCUMENT
+====================
+
+document.write('Hola Mundo');
+
+document -> representa todo el documento HTML
+.write() -> escribe directamente en el documento
+
+
+====================
+SCRIPT EN HTML
+====================
+
+- El <script> se coloca al final del <body>.
+- Motivo: primero carga HTML y CSS (lo visible), luego JS.
+- Mejora la percepción de velocidad del sitio.
+
+
+====================
+COMENTARIOS
+====================
+
+Comentar línea:
+Ctrl + }
+
+Comentar líneas:
+Ctrl + K + C
+
+Descomentar línea:
+Ctrl + K + U
+
+Corchetes [] Alt + 91 y Alt + 93
+Llaves {} Alt + 123 y Alt + 125
+
+
+====================
+VARIABLES
+====================
+
+Variable:
+Contenedor de información que apunta a un espacio en memoria.
+Su valor puede cambiar.
+
+let:
+- No permite redeclarar variables con el mismo nombre.
+
+const:
+- No se puede reasignar.
+
+Notas:
+- let y const no sobrescriben variables del objeto global (window).
+- var se usa solo por compatibilidad con navegadores viejos.
+
+
+====================
+DEPURACIÓN Y BREAKPOINTS
+====================
+
+Se puede depurar desde:
+
+- Navegador:
+  Consola -> Sources -> archivo JS -> agregar breakpoint
+
+- Visual Studio (pendiente ver con backend)
+
+
+====================
+PROMPT, CONFIRM Y ALERT
+====================
+
+(Pertenecen al objeto window - uso en frontend)
+
+alert()   -> muestra un mensaje
+prompt()  -> solicita datos al usuario
+confirm() -> permite aceptar o cancelar
+
+
+====================
+TIPOS DE DATOS
+====================
+
+Describe el tipo de valor que tiene una variable.
+
+Todos los primitivos se pasan por valor.
+
+Primitivos:
+- Boolean   -> true / false
+- Null      -> ausencia total de valor
+- Undefined -> variable declarada sin valor
+- Number    -> enteros y decimales
+- String    -> cadena de texto
+- Symbol    -> valor único
+
+typeof:
+Sirve para saber el tipo de dato.
+
+Ejemplo:
+console.log(typeof nombre);
+
+
+====================
+PALABRAS RESERVADAS
+====================
+
+Convenciones:
+- Variables: lowerCamelCase
+- Clases: UpperCamelCase
+
+Palabras reservadas:
+
+break, case, catch, class, const, continue, debugger, default, delete, do, else, let,
+export, extends, finally, for, function, if, import, in, instanceof, new, return,
+super, switch, this, throw, try, typeof, var, void, while, with, yield
+
+Palabras reservadas en el futuro:
+
+enum, implements, interface, package, private, protected, public, static, await
+
+Evitar usar:
+
+null, false, isNaN, NaN, isPrototypeOf, name, String, alert,
+undefined, hasOwnProperty, Infinity, length, prototype, Number, toString, constructor,
+true, isFinite, Math, valueOf, Object, prompt
+
+
+====================
+ARREGLOS (ARRAYS)
+====================
+
+- Son objetos que almacenan múltiples valores.
+- Se definen con corchetes: []
+
+Ejemplo:
+let numeros = [1, 2, 3];
+
+Métodos:
+
+.forEach() -> recorre cada elemento
+.push()    -> agrega elemento al final
+.unshift() -> agrega elemento al inicio
+.pop()     -> elimina el último elemento
+.indexOf() -> busca un elemento
+
+-1 -> significa que no encontró el elemento
+
+.length -> devuelve la cantidad de elementos
+
+
+====================
+OBJETOS LITERALES
+====================
+
+Todos los objetos son pasados por referencia.
+
+Más funciones para objetos:
+https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object
+
+Borrar una propiedad:
+Se usa delete.
+Ej: delete personaje.edad;
+
+Trabajar el objeto como arreglo:
+Se usa Object.entries.
+
+Para bloquear las propiedades:
+Se usa Object.freeze.
+
+Lista propiedades del objeto:
+Object.getOwnPropertyNames(personaje);
+
+Lista valores del objeto:
+const valores = Object.values(personaje);
+
+
+====================
+FUNCIONES BÁSICAS Y DE FLECHA
+====================
+
+Centralizan la lógica de un procedimiento que puede ejecutarse varias veces.
+
+
+====================
+RETORNO DE FUNCIONES
+====================
+
+Si una función no tiene un return explícito, retorna "undefined".
+
+
+====================
+PARAMETRO REST
+====================
+
+... <- parámetro rest
+
+Sirve para agrupar múltiples argumentos en un solo parámetro.
+Debe ser el último parámetro.
+
+
+--------------------
+SECCION 4
+--------------------
+
+Valor por referencia
+
+Operador spread: ...
+
+
+====================
+ESTRUCTURAS DE CONTROL DE FLUJO
+====================
+
+Permiten decidir qué acciones ejecutar según condiciones o repetir bloques de código.
+Incluyen condicionales (if, else, switch) y ciclos (for, while, do...while).
+
+
+====================
+PASO DE VARIABLES POR VALOR Y POR REFERENCIA
+====================
+
+Por valor:
+Se copia el dato, por lo que los cambios no afectan a la variable original.
+
+Por referencia:
+Se copia la dirección en memoria, por lo que los cambios sí afectan al valor original.
+
+
+====================
+ROMPER REFERENCIA DE OBJETOS
+====================
+
+Consiste en crear una copia independiente de un objeto para evitar modificar el original.
+Se puede lograr usando el operador spread u otros métodos de clonación.
+
+
+====================
+IF Y ELSE
+====================
+
+Permiten ejecutar diferentes bloques de código según una condición.
+"if" evalúa la condición y "else" define qué hacer cuando no se cumple.
+
+
+====================
+OPERADOR CONDICIONAL TERNARIO
+====================
+
+Funciona así:
+condición ? valor_si_true : valor_si_false
+
+Uso en strings:
+`Esta cerrado, hoy abrimos a las ${horaApertura}`
+
+> < : mayor o menor
+?: evalúa la condición
+:  caso contrario
+
+
+====================
+SWITCH
+====================
+
+Es similar a un if, pero más organizado para múltiples casos.
+
+switch(dia) {
+    case 0:
+        console.log('Domingo');
+        break;
+}
+
+default:
+Se ejecuta si no coincide con ningún case.
+
+
+====================
+WHILE Y DO WHILE
+====================
+
+continue:
+Salta a la siguiente iteración.
+
+Do while:
+Ejecuta el bloque al menos una vez.
+
+
+====================
+FOR, FOR IN Y FOR OF
+====================
+
+for (tradicional)
+Se usa cuando necesitas control total de la iteración.
+
+for...in
+Se utiliza para recorrer claves de objetos.
+No recomendado para arrays.
+
+for...of
+Se usa para recorrer valores directamente (arrays o iterables).
+
+Resumen rápido:
+for: control total
+for...in: claves (objetos)
+for...of: valores (arrays / iterables)
+
+
+
+--------------------
+SECCION 5 - Juego Black Jack
+--------------------
+
+Temas puntuales de la sección
+Temas de la sección
+En esta sección tocaremos los siguientes temas:
+
+Trabajar con arreglos
+
+Mezclar los valores de los arreglos
+
+Introducción a la manipulación del DOM
+
+Eventos
+
+Crear imágenes en la página
+
+Realizar la lógica para implementar un competidor de cartas.
+
+.pop: Elimina el último elemento de una matriz y lo devuelve. Si la matriz está vacía, se devuelve «undefined» y la matriz no se modifica.
+
+substring: regresa un nuevo string cortado en base a la posicion inicial y un final que tambien podemos definir.
+
+isNaN: Devuelve un valor booleano que indica si un valor es el valor reservado NaN (no es un número).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
