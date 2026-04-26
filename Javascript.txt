@@ -297,7 +297,12 @@ switch(dia) {
     case 0:
         console.log('Domingo');
         break;
+            case 1:
+        console.log('Lunes');
 }
+
+break:
+se usa para detener la ejecución del bloque actual y salir del switch, evitando que se ejecuten los siguientes case.
 
 default:
 Se ejecuta si no coincide con ningún case.
@@ -334,7 +339,6 @@ for...in: claves (objetos)
 for...of: valores (arrays / iterables)
 
 
-
 --------------------
 SECCION 5 - Juego Black Jack
 --------------------
@@ -344,15 +348,10 @@ Temas de la sección
 En esta sección tocaremos los siguientes temas:
 
 Trabajar con arreglos
-
 Mezclar los valores de los arreglos
-
 Introducción a la manipulación del DOM
-
 Eventos
-
 Crear imágenes en la página
-
 Realizar la lógica para implementar un competidor de cartas.
 
 .pop: Elimina el último elemento de una matriz y lo devuelve. Si la matriz está vacía, se devuelve «undefined» y la matriz no se modifica.
@@ -362,17 +361,75 @@ substring: regresa un nuevo string cortado en base a la posicion inicial y un fi
 isNaN: Devuelve un valor booleano que indica si un valor es el valor reservado NaN (no es un número).
 
 
+------------------
+DOM - Document Object Model
+------------------
+
+DOM:
+Poder tener acceso dinámico a través de programación a sus elementos y poder manipularlos.
+
+querySelector:
+Se usa para seleccionar el primer elemento del DOM que coincide con un selector CSS, con el fin de poder leerlo o modificarlo desde JavaScript.
+
+innerText:
+Se usa para leer o modificar el texto visible de un elemento del DOM, respetando el contenido tal como se muestra en pantalla (sin HTML).
+
+innerHTML:
+Se usa para leer o modificar el contenido HTML dentro de un elemento del DOM.
+
+Añadir un botom desde el DOM
+- createElement  -> crea el elemento
+- innerText      -> agrega texto
+- appendChild    -> lo inserta en el DOM
+- addEventListener -> agrega comportamiento
+
+1. CREAR EL BOTÓN
+const boton = document.createElement('button');
+
+2. AGREGAR TEXTO
+boton.innerText = 'Click aquí';
+
+3. AGREGARLO AL HTML (DOM)
+document.body.appendChild(boton);
+
+4. (OPCIONAL) AGREGAR EVENTO
+boton.addEventListener('click', () => {
+  console.log('Hiciste click');
+});
 
 
 
 
+CREAR UN INPUT DESDE EL DOM (PASO A PASO)
+
+1. CREAR EL INPUT
+const input = document.createElement('input');
+
+2. DEFINIR TIPO (OPCIONAL)
+input.type = 'text';
+
+3. AGREGAR PLACEHOLDER (OPCIONAL)
+input.placeholder = 'Escribe aquí';
+
+4. AGREGARLO AL HTML (DOM)
+document.body.appendChild(input);
+
+5. (OPCIONAL) LEER VALOR
+console.log(input.value);
+
+6. (OPCIONAL) DETECTAR CAMBIOS
+input.addEventListener('input', () => {
+  console.log(input.value);
+});
 
 
-
-
-
-
-
+RESUMEN:
+- createElement -> crea el input
+- type          -> define el tipo
+- placeholder   -> texto guía
+- appendChild   -> lo agrega al DOM
+- value         -> obtiene lo escrito
+- addEventListener -> detecta cambios
 
 
 

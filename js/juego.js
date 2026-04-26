@@ -11,6 +11,11 @@ let deck = [];
 const tipos = ["C", "D", "H", "S"];
 const especiales = ["A", "J", "Q", "K"];
 
+//Referencias del HTML
+
+const btnPedir = document.querySelector('#btnPedir');
+// console.log(btnPedir); // Ver en el DOM
+
 const crearDeck = () => {
     for (let i = 2; i <= 10; i++) {
         for (let tipo of tipos) {
@@ -44,10 +49,10 @@ const pedirCarta = () => {
 
     const carta = deck.pop(); // El pop va a remover el ultimo del arreglo y lo regreesa
 
-    console.log(deck)
-    console.log(carta); //carta debe ser de la baraja
+    // console.log(deck)
+    // console.log(carta); //carta debe ser de la baraja
 
-    return 'carta';
+    return carta;
 }
 
 // for( let i = 0; i <= 100; i++ ) {
@@ -56,20 +61,20 @@ const pedirCarta = () => {
 
 // }
 
+
+//pedircarta();
 const valorCarta = (carta) => {
 
     const valor = carta.substring(0, carta.length - 1);
-    let puntos = 0;
-    if ( isNaN ( valor ) ) {
-
-        if (  )
-
-    } else {
-        puntos = valor * 1;        
-    }
+    return (isNaN( valor ) ) ? 
+            ( valor === 'A' ) ? 11 : 10 
+            : valor * 1;  
 }
 
-valorCarta(puntos);
+// const valor = valorCarta(pedirCarta());
+// console.log({valor});
+
+//Eventos
 
 
 
