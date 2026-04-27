@@ -432,5 +432,20 @@ RESUMEN:
 - addEventListener -> detecta cambios
 
 
+------------------
+addEventListener
+------------------
 
+Callback: Una funcion que se coloca como argumento dentro de otra funcion.
+
+ej. 
+
+btnPedir.addEventListener('click', () => {
+
+});
+
+getElementById: trae elementos del js al html
+
+ej. 
+document.getElementById("puntos").textContent = puntosJugador;
 
