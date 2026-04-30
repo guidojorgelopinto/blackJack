@@ -449,3 +449,7 @@ getElementById: trae elementos del js al html
 ej. 
 document.getElementById("puntos").textContent = puntosJugador;
 
+.append(): ???????
+
+.disabled: bloquea un boton
+
