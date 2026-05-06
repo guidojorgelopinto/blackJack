@@ -459,14 +459,11 @@ Patron modulo
 
 'use strict': se usa para que no salga el codigo en la consola
 
-
 --------------------
-Optimizaciones: Primera parte
+Code Minify
 --------------------
 
-
-
-
+sirve para que no nos copien el codigo original y sea comprimido
 
 
 
