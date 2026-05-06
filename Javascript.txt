@@ -453,3 +453,21 @@ document.getElementById("puntos").textContent = puntosJugador;
 
 .disabled: bloquea un boton
 
+--------------------
+Patron modulo
+--------------------
+
+'use strict': se usa para que no salga el codigo en la consola
+
+
+--------------------
+Optimizaciones: Primera parte
+--------------------
+
+
+
+
+
+
+
+
